@@ -1,2 +1,2 @@
 # dots
-config/rices&amp;slices
+configs/rices&amp;slices
