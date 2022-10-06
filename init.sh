@@ -41,7 +41,7 @@ sudo chmod +x $HOME/.config/autostart/*
 
 # YAY
 git clone https://aur.archlinux.org/yay.git
-cd /home/$user/yay && makepkg -si --noconfirm && cd ..
+cd $HOME/yay && makepkg -si --noconfirm && cd ..
 rm -rf yay
 
 # Spotify
