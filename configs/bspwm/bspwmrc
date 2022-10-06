@@ -3,8 +3,8 @@
 pgrep -x sxhkd > /dev/null || sxhkd &
 zxkbmap de &
 picom -f &
-sh $HOME/.config/polybar/launch.sh &
-sh $HOME/.conf/bspwm/pywal.sh &
+sh $HOME/.config/autostart/polybar_init.sh &
+sh $HOME/.config/autostart/pywal_init.sh &
 nitrogen --restore &
 
 
