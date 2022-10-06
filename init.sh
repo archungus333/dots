@@ -15,7 +15,7 @@ sudo pacman -Syyu --noconfirm
 # Env Installation
 sudo pacman -S --noconfirm --needed bspwm sxhkd polybar picom nitrogen kitty lightdm lightdm-gtk-greeter dmenu xorg xorg-utils xorg-drivers xorg-apps
 # Misc Installation
-sudo pacman -S --noconfirm --needed nano neovim vim htop tree neofetch cmatrix python python-pip python-pywal
+sudo pacman -S --noconfirm --needed nano neovim vim htop tree neofetch cmatrix python python-pip python-pywal noto-fonts-cjk noto-fonts-emoji noto-fonts
 
 # Lightdm Keyboard layout
 sudo echo 'Section "InputClass"
