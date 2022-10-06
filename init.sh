@@ -44,6 +44,9 @@ git clone https://aur.archlinux.org/yay.git
 cd $HOME/yay && makepkg -si --noconfirm && cd ..
 rm -rf yay
 
+# Picom
+yay -S picom-ibhagwan-git
+
 # Spotify
 yay -S --noconfirm spotify spicetify-cli
 curl -fsSL https://raw.githubusercontent.com/spicetify/spicetify-marketplace/main/resources/install.sh | sh
