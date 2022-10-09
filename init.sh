@@ -7,7 +7,7 @@ read -p "[Enter Username]: " user
 # Black Arch Repo Sync
 sudo curl -O https://blackarch.org/strap.sh
 sudo echo 5ea40d49ecd14c2e024deecf90605426db97ea0c strap.sh | sha1sum -c
-sudo chmod +x strap.sh && sudo ./strap.sh 
+sudo chmod +x strap.sh && ./strap.sh 
 sudo rm -f strap.sh
 
 # Package Sync & Init Installation
@@ -40,9 +40,8 @@ sudo chmod +x $HOME/.config/bspwmrc
 sudo chmod +x $HOME/.config/autostart/*
 
 # YAY
-git clone https://aur.archlinux.org/yay.git
-cd $HOME/yay && makepkg -si --noconfirm && cd ..
-rm -rf yay
+git clone https://aur.archlinux.org/yay.git /opt
+cd /opt/yay && makepkg -si --noconfirm && cd $HOME && rm -rf /opt/yay
 
 # Picom
 yay -S picom-ibhagwan-git
