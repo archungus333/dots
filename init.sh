@@ -15,7 +15,7 @@ sudo pacman -Syyu --noconfirm
 # Env Installation
 sudo pacman -S --noconfirm --needed bspwm sxhkd polybar picom nitrogen kitty lightdm lightdm-gtk-greeter dmenu xorg xorg-utils xorg-drivers xorg-apps
 # Misc Installation
-sudo pacman -S --noconfirm --needed nano neovim vim htop tree neofetch cmatrix python python-pip python-pywal noto-fonts-cjk noto-fonts-emoji noto-fonts
+sudo pacman -S --noconfirm --needed nano neovim vim htop tree neofetch cmatrix python python-pip python-pywal noto-fonts-cjk noto-fonts-emoji noto-fonts ttf-font-awesome 
 
 # Lightdm Keyboard layout
 sudo echo 'Section "InputClass"
@@ -43,8 +43,9 @@ sudo chmod +x $HOME/.config/autostart/*
 git clone https://aur.archlinux.org/yay.git /opt
 cd /opt/yay && makepkg -si --noconfirm && cd $HOME && rm -rf /opt/yay
 
-# Picom
+# Init YAY Installs
 yay -S picom-ibhagwan-git
+yay -S nerd-fonts-complete
 
 # Spotify
 yay -S --noconfirm spotify spicetify-cli
