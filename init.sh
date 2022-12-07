@@ -14,8 +14,10 @@ sudo rm -f strap.sh
 # Package Sync & Init Installation
 sudo pacman -Syyu --noconfirm
 # Env Installation
-sudo pacman -S --noconfirm --needed bspwm sxhkd lightdm lightdm-gtk-greeter xorg xorg-utils xorg-drivers xorg-apps xorg-xinit xf86-video-intel polybar picom nitrogen kitty dmenu 
-# Misc Installation
+sudo pacman -S --noconfirm --needed bspwm sxhkd lightdm lightdm-gtk-greeter lightdm-webkit2-greeter xorg xf86-video-intel polybar 
+# Misc1 Installation
+sudo pacman -S --noconfirm --needed picom nitrogen kitty dmenu 
+# Misc2 Installation
 sudo pacman -S --noconfirm --needed nano neovim vim emacs htop btop tree unzip neofetch cmatrix python python-pip python-pywal noto-fonts-cjk noto-fonts-emoji noto-fonts ttf-font-awesome 
 
 # YAY Setup
@@ -50,4 +52,4 @@ sudo chmod +x $HOME/.config/bspwm/bspwmrc
 sudo chmod +x $HOME/.config/autostart/*
 
 # User Privs
-sudo chown -R $USER:$USER /home/$USER
+sudo chown -R $USER:$USER /home/$USER/.config/
