@@ -26,14 +26,14 @@ yay -S --noconfirm picom-ibhagwan-git
 yay -S --noconfirm nerd-fonts-complete
 
 # Spotify Setup
-sudo curl -fsSL https://raw.githubusercontent.com/spicetify/spicetify-cli/master/install.sh | sh
-sudo curl -fsSL https://raw.githubusercontent.com/spicetify/spicetify-marketplace/main/resources/install.sh | sh
+curl -fsSL https://raw.githubusercontent.com/spicetify/spicetify-cli/master/install.sh | sh
+curl -fsSL https://raw.githubusercontent.com/spicetify/spicetify-marketplace/main/resources/install.sh | sh
 # sudo chmod +x /opt/spotify
 # sudo chmod +x /opt/spotify/Apps -R
 # spicetify backup apply
 
 # Lightdm Setup
-sudo -s
+su root
 echo 'Section "InputClass"
     Identifier "keyboard"
     MatchIsKeyboard "yes"
