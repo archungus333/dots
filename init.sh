@@ -24,7 +24,7 @@ cd /tmp/yay && makepkg -si --noconfirm && cd $HOME
 # YAY Init Installation
 yay -S --noconfirm picom-ibhagwan-git
 yay -S --noconfirm nerd-fonts-complete
-yay -S --noconfirm spotify
+# yay -S --noconfirm spotify
 
 # Spotify Setup
 curl -fsSL https://raw.githubusercontent.com/spicetify/spicetify-cli/master/install.sh | sh
