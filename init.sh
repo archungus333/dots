@@ -3,7 +3,7 @@ if [ $(id -u) = 0 ]; then
     echo "[x] Script has to be executed as User!"
     exit 1
 fi
-    echo "[+] Script executed as $USER"
+    echo "[+] Script executed as $USER!"
 
 # Black Arch Repo Sync
 sudo curl -O https://blackarch.org/strap.sh
