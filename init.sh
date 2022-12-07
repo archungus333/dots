@@ -14,7 +14,7 @@ sudo rm -f strap.sh
 # Package Sync & Init Installation
 sudo pacman -Syyu --noconfirm
 # Env Installation
-sudo pacman -S --noconfirm --needed bspwm sxhkd polybar picom nitrogen kitty lightdm lightdm-gtk-greeter dmenu xorg xorg-utils xorg-drivers xorg-apps xorg-xf86-video-intel
+sudo pacman -S --noconfirm --needed bspwm sxhkd polybar lightdm lightdm-gtk-greeter picom nitrogen kitty dmenu xorg xorg-utils xorg-drivers xorg-apps xorg-xf86-video-intel
 # Misc Installation
 sudo pacman -S --noconfirm --needed nano neovim vim emacs htop btop tree unzip neofetch cmatrix python python-pip python-pywal noto-fonts-cjk noto-fonts-emoji noto-fonts ttf-font-awesome 
 
@@ -26,11 +26,11 @@ yay -S --noconfirm picom-ibhagwan-git
 yay -S --noconfirm nerd-fonts-complete
 
 # Spotify Setup
-# yay -S --noconfirm spotify spicetify-cli
-# curl -fsSL https://raw.githubusercontent.com/spicetify/spicetify-marketplace/main/resources/install.sh | sh
+sudo curl -fsSL https://raw.githubusercontent.com/spicetify/spicetify-cli/master/install.sh | sh
+sudo curl -fsSL https://raw.githubusercontent.com/spicetify/spicetify-marketplace/main/resources/install.sh | sh
 # sudo chmod +x /opt/spotify
 # sudo chmod +x /opt/spotify/Apps -R
-# spicetify backup apply
+spicetify backup apply
 
 # Lightdm Setup
 sudo echo 'Section "InputClass"
