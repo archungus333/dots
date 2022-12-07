@@ -14,7 +14,7 @@ sudo rm -f strap.sh
 # Package Sync & Init Installation
 sudo pacman -Syyu --noconfirm
 # Env Installation
-sudo pacman -S --noconfirm --needed bspwm sxhkd lightdm lightdm-gtk-greeter lightdm-webkit2-greeter xorg-server xorg-apps xorg xf86-video-intel polybar 
+sudo pacman -S --noconfirm --needed bspwm sxhkd lightdm lightdm-webkit2-greeter xorg-server xorg-apps xorg xf86-video-intel polybar 
 # Misc1 Installation
 sudo pacman -S --noconfirm --needed picom nitrogen kitty dmenu 
 # Misc2 Installation
