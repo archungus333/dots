@@ -30,16 +30,18 @@ sudo curl -fsSL https://raw.githubusercontent.com/spicetify/spicetify-cli/master
 sudo curl -fsSL https://raw.githubusercontent.com/spicetify/spicetify-marketplace/main/resources/install.sh | sh
 # sudo chmod +x /opt/spotify
 # sudo chmod +x /opt/spotify/Apps -R
-spicetify backup apply
+# spicetify backup apply
 
 # Lightdm Setup
-sudo echo 'Section "InputClass"
+sudo -s
+echo 'Section "InputClass"
     Identifier "keyboard"
     MatchIsKeyboard "yes"
     Option "XkbLayout" "de"
     Option "XkbVariant" "nodeadkeys"
 EndSection' > /etc/X11/xorg.conf.d/20-keyboard.conf
-sudo systemctl enable lightdm.service
+systemctl enable lightdm.service
+exit
 
 # Move Dots
 git clone https://www.github.com/archungus333/dots.git /tmp/dots 
