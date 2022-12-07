@@ -23,26 +23,24 @@ git clone https://aur.archlinux.org/yay.git /tmp/yay
 cd /tmp/yay && makepkg -si --noconfirm && cd $HOME
 # YAY Init Installation
 yay -S --noconfirm picom-ibhagwan-git
-# yay -S --noconfirm nerd-fonts-complete
+yay -S --noconfirm nerd-fonts-complete
 yay -S --noconfirm spotify
 
 # Spotify Setup
 curl -fsSL https://raw.githubusercontent.com/spicetify/spicetify-cli/master/install.sh | sh
 curl -fsSL https://raw.githubusercontent.com/spicetify/spicetify-marketplace/main/resources/install.sh | sh
-# sudo chmod +x /opt/spotify
-# sudo chmod +x /opt/spotify/Apps -R
-# spicetify backup apply
+sudo chmod +x /opt/spotify
+sudo chmod +x /opt/spotify/Apps -R
+spicetify backup apply
 
 # Lightdm Setup
-su root
-echo 'Section "InputClass"
+sudo echo 'Section "InputClass"
     Identifier "keyboard"
     MatchIsKeyboard "yes"
     Option "XkbLayout" "de"
     Option "XkbVariant" "nodeadkeys"
 EndSection' > /etc/X11/xorg.conf.d/20-keyboard.conf
-systemctl enable lightdm.service
-exit
+sudo systemctl enable lightdm.service
 
 # Move Dots
 git clone https://www.github.com/archungus333/dots.git /tmp/dots 
