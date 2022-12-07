@@ -34,6 +34,7 @@ yay -S --noconfirm nerd-fonts-complete
 # spicetify backup apply
 
 # Lightdm Setup
+sudo sed --in-place=.bak 's/^#greeter-session=example-gtk-gnome/greeter-session=lightdm-webkit2-greeter/' /etc/lightdm/lightdm.conf
 sudo echo 'Section "InputClass"
     Identifier "keyboard"
     MatchIsKeyboard "yes"
@@ -52,4 +53,4 @@ sudo chmod +x $HOME/.config/bspwm/bspwmrc
 sudo chmod +x $HOME/.config/autostart/*
 
 # User Privs
-sudo chown -R $USER:$USER /home/$USER/.config/
+sudo chown -R $USER:$USER /home/$USER/.config
