@@ -47,4 +47,4 @@ sudo chmod +x $HOME/.config/bspwmrc
 sudo chmod +x $HOME/.config/autostart/*
 
 # User Privs
-sudo chown -Rv $user:$user /home/$user
+sudo chown -Rv $USER:$USER /home/$USER
