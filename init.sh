@@ -19,7 +19,7 @@ sudo pacman -S --noconfirm --needed bspwm sxhkd polybar picom nitrogen kitty lig
 sudo pacman -S --noconfirm --needed nano neovim vim emacs htop btop tree neofetch cmatrix python python-pip python-pywal noto-fonts-cjk noto-fonts-emoji noto-fonts ttf-font-awesome 
 
 # YAY Setup
-git clone https://aur.archlinux.org/yay.git /opt
+git clone https://aur.archlinux.org/yay.git /opt/yay
 cd /opt/yay && makepkg -si --noconfirm && cd $HOME && rm -rf /opt/yay
 # YAY Init Installation
 yay -S picom-ibhagwan-git
@@ -42,7 +42,7 @@ EndSection' > /etc/X11/xorg.conf.d/20-keyboard.conf
 sudo systemctl enable lightdm.service
 
 # Move Dots
-git clone https://www.github.com/archungus333/dots.git /opt
+git clone https://www.github.com/archungus333/dots.git /opt/dots
 cp -r /opt/dots/configs/* $HOME/.config
 cp -r /opt/dots/wallpapers $HOME
 rm -rf /opt/dots
