@@ -6,8 +6,8 @@ fi
     echo "[+] Script executed as $USER!"
 
 # Black Arch Repo Sync
-sudo curl -O https://blackarch.org/strap.sh
-sudo echo 5ea40d49ecd14c2e024deecf90605426db97ea0c strap.sh | sha1sum -c
+sudo curl -O https://blackarch.org/strap.sh > /dev/null
+sudo echo 5ea40d49ecd14c2e024deecf90605426db97ea0c strap.sh | sha1sum -c > /dev/null
 sudo bash strap.sh 
 sudo rm -f strap.sh
 
