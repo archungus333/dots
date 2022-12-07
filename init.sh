@@ -8,7 +8,7 @@ fi
 # Black Arch Repo Sync
 sudo curl -O https://blackarch.org/strap.sh
 sudo echo 5ea40d49ecd14c2e024deecf90605426db97ea0c strap.sh | sha1sum -c
-sudo chmod +x strap.sh && ./strap.sh 
+sudo bash strap.sh 
 sudo rm -f strap.sh
 
 # Package Sync & Init Installation
@@ -19,8 +19,8 @@ sudo pacman -S --noconfirm --needed bspwm sxhkd polybar picom nitrogen kitty lig
 sudo pacman -S --noconfirm --needed nano neovim vim emacs htop btop tree neofetch cmatrix python python-pip python-pywal noto-fonts-cjk noto-fonts-emoji noto-fonts ttf-font-awesome 
 
 # YAY Setup
-git clone https://aur.archlinux.org/yay.git /opt/yay
-cd /opt/yay && makepkg -si --noconfirm && cd $HOME && rm -rf /opt/yay
+git clone https://aur.archlinux.org/yay.git /tmp/yay
+cd /tmp/yay && makepkg -si --noconfirm && cd $HOME
 # YAY Init Installation
 yay -S picom-ibhagwan-git
 yay -S nerd-fonts-complete
@@ -42,10 +42,9 @@ EndSection' > /etc/X11/xorg.conf.d/20-keyboard.conf
 sudo systemctl enable lightdm.service
 
 # Move Dots
-git clone https://www.github.com/archungus333/dots.git /opt/dots
-cp -r /opt/dots/configs/* $HOME/.config
-cp -r /opt/dots/wallpapers $HOME
-rm -rf /opt/dots
+git clone https://www.github.com/archungus333/dots.git /tmp/dots
+cp -r /tmp/dots/configs/* $HOME/.config
+cp -r /tmp/dots/wallpapers $HOME
 
 # Exec Privs
 sudo chmod +x $HOME/.config/bspwmrc
