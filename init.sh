@@ -35,12 +35,12 @@ yay -S --noconfirm nerd-fonts-complete
 
 # Lightdm Setup
 sudo sed --in-place=.bak 's/^#greeter-session=example-gtk-gnome/greeter-session=lightdm-webkit2-greeter/' /etc/lightdm/lightdm.conf
-sudo echo 'Section "InputClass"
+echo 'Section "InputClass"
     Identifier "keyboard"
     MatchIsKeyboard "yes"
     Option "XkbLayout" "de"
     Option "XkbVariant" "nodeadkeys"
-EndSection' > /etc/X11/xorg.conf.d/20-keyboard.conf
+EndSection' | sudo tee /etc/X11/xorg.conf.d/20-keyboard.conf
 sudo systemctl enable lightdm.service
 
 # Move Dots
