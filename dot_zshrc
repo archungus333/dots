@@ -1,0 +1,37 @@
+# History
+HISTFILE=~/.histfile
+HISTSIZE=100000
+SAVEHIST=1000
+
+# Autocomplete
+autoload -Uz compinit
+compinit
+
+# Prompt
+getParent() {
+    # Get the name of the parent command
+    comm_name="$(ps -p $PPID -o comm=)"
+    PARENT=""
+    # Ignore if kitty
+    if [ $comm_name != "kitty" ]; then PARENT="[\e[2m\e[3m$comm_name\e[0m%{$fg[cyan]%}]"; fi
+    echo $PARENT
+}
+
+getPrompt() {
+    PROMPT="%{$fg[cyan]%}╭─"
+    PROMPT+=$(getParent)
+    PROMPT+="[%B%{$fg[white]%}%n%{$fg[cyan]%}@%{$fg[white]%}%m%{$fg[cyan]%}: %~%b%{$fg[cyan]%}]%{$reset_color%}"
+    PROMPT+="
+%{$fg[cyan]%}╰─%(!.#.$)%{$reset_color%} "
+    setopt no_prompt_{bang,subst} prompt_percent  # enable/disable correct prompt expansions
+}
+
+# Prompt Init
+autoload -U colors && colors
+autoload -Uz add-zsh-hook
+add-zsh-hook precmd getPrompt
+
+# Alias
+alias ls='ls --color=auto'
+alias ip='ip -color'
+alias emacs='emacs -nw'
